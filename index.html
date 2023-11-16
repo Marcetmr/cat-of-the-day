@@ -6,9 +6,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat of the Day</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>Welcom to my Cat of the Day app!</p>
+<div class="grid-container">
+    <!-- Header section with navigation links -->
+    <header>
+     <ul class="navbar">
+        <!-- Navigation links -->
+        <li><a href="#todays-cat-section">Today's cat</a></li>
+        <li><a href="#submit-section">Submit your cat</a></li>
+    </ul>
+    </header>
+    <!-- Main title section -->
+    <h1 id="main-title">Cat of the Day</h1>
+    <!-- Section displaying today's cat -->
+    <article class="todays-cat-section">
+        <!-- Cat details -->
+        <h2 id="cat-title">Today's Cat is Marjorie</h2>
+        <img class="cat-pic" src="/img/Marjorie.jpg" alt="Cat of the day picture">
+        <p>Meet Marjorie, the spirited tabby cat with an extra dash of excitement for Christmas! Tabby cats, like Marjorie, are known for their distinctive coat patterns featuring stripes, swirls, or spots. Tabby cats are renowned for their playful and friendly nature, and Marjorie exemplifies this with her festive anticipation for Christmas.</p>
+        <!-- Share section -->
+        <div class="share-logos">
+            <a href="https://www.facebook.com" target="_blank"><img class="share-logo" src="/img/facebook.png" alt="Share to Facebook link"</a>
+            <a href="https://web.whatsapp.com" target="_blank"><img class="share-logo" src="/img/whatsapp.png" alt="Share via WhatsApp link"</a>
+            <a href="https://www.instagram.com" target="_blank"><img class="share-logo" src="/img/instagram.png" alt="Share to Instagram link"</a>
+        </div>
+    </article>
+    <!-- Section for submitting a cat -->
+    <article class="submit-section">
+        <!-- Submission form -->
+        <h2 id="submit-title">Submit your own cat!</h2>
+        <form action="submit_form" method="post" enctype="multipart/form-data">
+            <!-- Form fields -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="image">Upload your cat's image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <label for="additional-information">Additional information:</label>
+            <textarea id="additional-information" name="additional-information" rows="4" required></textarea>
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+        </form>
+    </article>
+    <!-- Footer section -->
+    <footer>
+        &copy; 2023 Maneki Neko Development LLC. All rights reserved.
+    </footer>
+</div>
+<script src="/scripts/script.js"></script>
 </body>
 </html>
